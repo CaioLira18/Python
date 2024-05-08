@@ -1,3 +1,4 @@
+import os
 nomes = [ ]
 tipos_prato = { }
 paises_origem = { }
@@ -68,6 +69,32 @@ def remover_receita():
                 i += 1
     if not removido:
         print(f"A receita '{nome_receita}' não foi encontrada.")
+
+def visualizar_receita():
+    resposta = input("Digite 1 para visualizar todas as receitas e 2 para visualizar uma receita específica: ")
+    
+    if resposta == '1':
+        with open("receitas.txt", "r", encoding="utf-8") as arquivo:
+            for linha in arquivo:
+                print(linha.strip())
+            
+    elif resposta == '2':
+        nome_receita = input("Qual receita você deseja visualizar: ")
+        with open("receitas.txt", "r", encoding="utf-8") as arquivo:
+            linhas = arquivo.readlines()
+            i = 0
+            while i < len(linhas):
+                if nome_receita in linhas[i]:
+                    os.system("cls")
+                    print(f"Receita encontrada:\nNome: {nome_receita}")
+                    for j in range(i + 1, min(i + 6, len(linhas))):  # Imprimindo as próximas 4 linhas
+                        print(linhas[j], end='')
+                    break
+                i += 1
+            else:
+                print(f"A receita '{nome_receita}' não foi encontrada.")
+
+
 # Menu Interativo   
 while True: # Loop While para o usuario ter a possibilidade de realizar outra função
     opcao = input("Opções de Entrada:\n\n1 - Funções Básicas (Adicionar, Remover, Visualizar e Atualizar)\n2 - Funções especiais (Filtrar por país, Lista de favoritos, Receitas aleatórias e Filtrar por tipo de prato)\n3 - Finalizar\n\nDigite o numero referente a operação desejada:")

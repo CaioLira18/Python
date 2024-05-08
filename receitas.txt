@@ -1,0 +1,12 @@
+Nome: Bolo de chocolate
+Tipo de prato: sobremesa
+País de origem: brasil
+Ingredientes: chocolate, cacau, massa 
+Modo de preparo: mistura e bate tudo 
+----------
+Nome: Bolo de coco
+Tipo de prato: sobremesa
+País de origem: brasil
+Ingredientes: chocolate, cacau, massa 
+Modo de preparo: mistura e bate tudo 
+----------
