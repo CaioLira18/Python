@@ -25,7 +25,7 @@ Este projeto foi desenvolvido como parte do curso de Fundamentos de Programaçã
 
 # Como Executar o Projeto
 
-1.Certifique-se de ter o Python 3.12 instalado em seu sistema.
-2.Clone este repositório para sua máquina local.
-3.Abra um terminal na pasta do projeto.
-4.Execute o comando python main.py para iniciar o sistema.
+- Certifique-se de ter o Python 3.12 instalado em seu sistema.
+- Clone este repositório para sua máquina local.
+- Abra um terminal na pasta do projeto.
+- Execute o comando python main.py para iniciar o sistema.
