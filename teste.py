@@ -1,18 +1,19 @@
 import os
+
 nomes = [ ]
 tipos_prato = { }
 paises_origem = { }
 
 
 def adicionar_receita():
-    nome = input("Digite o nome da receita: ") # Adiciona o nome da receita
+    nome = input("Digite o nome da receita: ").lower() # Adiciona o nome da receita
     if nome in nomes:
         print("A receita já foi adicionada.")
         return
-    tipo_prato = input("Digite o tipo do prato (Sobremesa, Salada, Aperitivo etc): ")
-    pais_origem = input("Digite o país de origem da receita: ") # Adiciona o país de origem
-    ingredientes = input("Digite os ingredientes da receita (separados por vírgula): ") # Adiciona os Ingredientes
-    modo_preparo = input("Digite o modo de preparo da receita: ") # Adiciona o passo a passo
+    tipo_prato = input("Digite o tipo do prato (Sobremesa, Salada, Aperitivo etc): ").lower()
+    pais_origem = input("Digite o país de origem da receita: ").lower() # Adiciona o país de origem
+    ingredientes = input("Digite os ingredientes da receita (separados por vírgula): ").lower() # Adiciona os Ingredientes
+    modo_preparo = input("Digite o modo de preparo da receita: ").lower() # Adiciona o passo a passo
     separador = "----------"
     # Formatação da receita
     receita = f"Nome: {nome}\nTipo de prato: {tipo_prato}\nPaís de origem: {pais_origem}\nIngredientes: {ingredientes}\nModo de preparo: {modo_preparo}\n{separador}"
@@ -41,17 +42,23 @@ def adicionar_receita():
     print("Receita adicionada com sucesso!") # Retorna ao usuario uma mensagem de sucesso
 
 def remover_receita():
-    nome_receita = input("Digite o nome da receita que deseja remover: ")
+    nome_receita = input("Digite o nome da receita que deseja remover: ").lower()
     # remover os dados adicionados previamente
     if nome_receita in nomes:
         nomes.remove(nome_receita)
         for tipo, receitas in tipos_prato.items():
             if nome_receita in receitas:
                 receitas.remove(nome_receita)
+                if tipos_prato[tipo] == [ ]:
+                    tipos_prato.pop(tipo)
+                    print(f"tendo em vista a falta de itens na categoria '{tipo}', tal categoria foi removida do banco de dados.")
                 print(f"A receita '{nome_receita}' foi removida da categoria '{tipo}'.")
         for pais, receitas in paises_origem.items():
             if nome_receita in receitas:
                 receitas.remove(nome_receita)
+                if tipos_prato[tipo] == [ ]:
+                    tipos_prato.pop(tipo)
+                    print(f"tendo em vista a falta de itens na categoria '{tipo}', tal categoria foi removida do banco de dados.")
                 print(f"A receita '{nome_receita}' foi removida do país '{pais}'.")
     with open("receitas.txt", "r", encoding="utf-8") as arquivo:
         linhas = arquivo.readlines()
@@ -79,7 +86,7 @@ def visualizar_receita():
                 print(linha.strip())
             
     elif resposta == '2':
-        nome_receita = input("Qual receita você deseja visualizar: ")
+        nome_receita = input("Qual receita você deseja visualizar: ").lower()
         with open("receitas.txt", "r", encoding="utf-8") as arquivo:
             linhas = arquivo.readlines()
             i = 0
@@ -94,6 +101,65 @@ def visualizar_receita():
             else:
                 print(f"A receita '{nome_receita}' não foi encontrada.")
 
+def atualizar_receita():
+    nome_atualizar = input("Digite o nome da receita que deseja atualizar: ").lower()
+    if nome_atualizar not in nomes:
+        print(f"A receita '{nome_atualizar}' não foi encontrada.")
+        return
+
+    tipo_prato_novo = input("Digite o novo tipo do prato (Sobremesa, Salada, Aperitivo etc): ").lower()
+    pais_origem_novo = input("Digite o novo país de origem da receita: ").lower()
+    ingredientes_novos = input("Digite os novos ingredientes da receita (separados por vírgula): ").lower()
+    modo_preparo_novo = input("Digite o novo modo de preparo da receita: ").lower()
+    separador = "----------"
+
+    # Atualizando os dados da receita na lista e nos dicionários
+    indice_receita = nomes.index(nome_atualizar)
+    nomes[indice_receita] = nome_atualizar
+
+    if tipo_prato_novo not in tipos_prato:
+        tipos_prato[tipo_prato_novo] = [ ]
+        print(f"Nova categoria de pratos foi adicionada: {tipo_prato_novo}")
+    elif tipo_prato_novo in tipos_prato:
+        tipos_prato[tipo_prato_novo].append(nome_atualizar)
+    for tipo, receitas in tipos_prato.items():
+            if nome_atualizar in receitas:
+                receitas.remove(nome_atualizar)
+                if tipos_prato[tipo] == [ ]:
+                    tipos_prato.pop(tipo)
+                    print(f"tendo em vista a falta de itens na categoria '{tipo}', tal categoria foi removida do banco de dados.")
+                tipos_prato[tipo_prato_novo].append(nome_atualizar)
+                print(f"A receita '{nome_atualizar}' foi atualizada na categoria '{tipo}'.")
+
+    if pais_origem_novo not in paises_origem:
+        paises_origem[pais_origem_novo] = [ ]
+        print(f"Novo paìs de origem foi adicionado: {pais_origem_novo}")
+    elif pais_origem_novo in paises_origem:
+        paises_origem[pais_origem_novo].append(nome_atualizar)
+    for tipo, receitas in paises_origem.items():
+            if nome_atualizar in receitas:
+                receitas.remove(nome_atualizar)
+                if paises_origem[tipo] == [ ]:
+                    paises_origem.pop(tipo)
+                    print(f"tendo em vista a falta de itens na categoria '{tipo}', tal categoria foi removida do banco de dados.")
+                paises_origem[pais_origem_novo].append(nome_atualizar)
+                print(f"A receita '{nome_atualizar}' foi atualizada na categoria '{tipo}'.")
+
+    # Construindo a nova versão da receita
+    nova_receita = f"Nome: {nome_atualizar}\nTipo de prato: {tipo_prato_novo}\nPaís de origem: {pais_origem_novo}\nIngredientes: {ingredientes_novos}\nModo de preparo: {modo_preparo_novo}\n{separador}"
+
+    # Atualizando a receita no arquivo
+    with open("receitas.txt", "r", encoding="utf-8") as arquivo:
+        linhas = arquivo.readlines()
+    with open("receitas.txt", "w", encoding="utf-8") as arquivo:
+        for linha in linhas:
+            if nome_atualizar in linha:
+                arquivo.write(nova_receita)
+                arquivo.write("\n")
+            else:
+                arquivo.write(linha)
+
+    print(f"A receita '{nome_atualizar}' foi atualizada com sucesso.")
 
 # Menu Interativo   
 while True: # Loop While para o usuario ter a possibilidade de realizar outra função
