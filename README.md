@@ -15,7 +15,8 @@ Este projeto foi desenvolvido como parte do curso de Fundamentos de Programaçã
 # Tecnologias Utilizadas
 
 - Python 3.12
-- Biblioteca random para sugestão de receitas aleatórias
+- Biblioteca "random" para sugestão de receitas aleatórias
+- Biblioteca "os" para limpar o terminal
 
 # Estrutura do Projeto
 
