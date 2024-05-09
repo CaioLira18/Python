@@ -4,7 +4,6 @@ nomes = [ ]
 tipos_prato = { }
 paises_origem = { }
 
-
 def adicionar_receita():
     nome = input("Digite o nome da receita: ").lower() # Adiciona o nome da receita
     if nome in nomes:
@@ -101,6 +100,38 @@ def visualizar_receita():
             else:
                 print(f"A receita '{nome_receita}' não foi encontrada.")
 
+def filtrar_pais():
+    pais = input("Digite o país que você deseja filtar: ").lower()
+    with open("receitas.txt", "r", encoding="utf-8") as arquivo:
+        linhas = arquivo.readlines()
+        i = 0
+        encontrou_pais = False
+        while i < len(linhas):
+            if pais in linhas[i]:
+                encontrou_pais = True
+                print(f"País encontrado!")
+                for j in range(i - 2, i + 4):  # Imprimindo as próximas 5 linhas a partir da linha do país encontrado
+                    print(linhas[j], end='')
+            i += 1
+        if not encontrou_pais:
+            print(f"O {pais} não foi encontrado.")
+
+def filtar_prato():
+    tipos_prato = input("Digite o tipo de prato que você deseja filtrar: ").lower()
+    with open("receitas.txt", "r", encoding="utf-8") as arquivo:
+        linhas = arquivo.readlines()
+        i = 0
+        encontrou_prato = False
+        while i < len(linhas):
+            if tipos_prato in linhas[i]:
+                encontrou_prato = True
+                print(f"Tipo de prato encontrado!")
+                for j in range(i - 2, i + 4):  # Imprimindo as próximas 5 linhas a partir da linha do país encontrado
+                    print(linhas[j], end='')
+            i += 1
+        if not encontrou_prato:
+            print(f"O {tipos_prato} não foi encontrado.")
+
 def atualizar_receita():
     nome_atualizar = input("Digite o nome da receita que deseja atualizar: ").lower()
     if nome_atualizar not in nomes:
@@ -160,7 +191,6 @@ def atualizar_receita():
                 arquivo.write(linha)
 
     print(f"A receita '{nome_atualizar}' foi atualizada com sucesso.")
-
 # Menu Interativo   
 while True: # Loop While para o usuario ter a possibilidade de realizar outra função
     opcao = input("Opções de Entrada:\n\n1 - Funções Básicas (Adicionar, Remover, Visualizar e Atualizar)\n2 - Funções especiais (Filtrar por país, Lista de favoritos, Receitas aleatórias e Filtrar por tipo de prato)\n3 - Finalizar\n\nDigite o numero referente a operação desejada:")
@@ -185,7 +215,7 @@ while True: # Loop While para o usuario ter a possibilidade de realizar outra fu
         elif opcao == '3':
             receitas_aleatorias()
         elif opcao == '4':
-            filtrar_prato()
+            filtar_prato()
         elif opcao == '5':
             continue
     elif opcao == '3':
