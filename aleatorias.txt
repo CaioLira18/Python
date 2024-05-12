@@ -1,0 +1,60 @@
+Nome: sopa de legumes colorida
+Tipo de prato: sopa
+País de origem: brasil
+Ingredientes: 1 cebola picada, 2 dentes de alho picados, 1 colher de sopa de azeite, 1 cenoura picada, 1 batata picada, 1 xícara de brócolis picado, 1 xícara de couve-flor picada, 4 xícaras de caldo de legumes, sal e pimenta a gosto.
+Modo de preparo: 1. Refogue a cebola e o alho no azeite até ficarem macios. 2. Adicione a cenoura, a batata, o brócolis e a couve-flor. Refogue por mais alguns minutos. 3. Despeje o caldo de legumes e tempere com sal e pimenta. 4. Cozinhe até que os legumes estejam macios. 5. Sirva quente.
+----------
+Nome: frango assado com limão e ervas
+Tipo de prato: prato principal
+País de origem: frança
+Ingredientes: 1 frango inteiro, 2 limões cortados em rodelas, 1 ramo de alecrim fresco, 1 ramo de tomilho fresco, 2 colheres de sopa de azeite, sal e pimenta a gosto.
+Modo de preparo: 1. Pré-aqueça o forno a 200°C. 2. Lave o frango e seque com papel toalha. 3. Tempere o frango por dentro e por fora com sal, pimenta, alecrim e tomilho. 4. Coloque as rodelas de limão dentro do frango. 5. Regue o frango com azeite. 6. Leve ao forno por 1 hora e 15 minutos, ou até que esteja dourado e cozido por dentro.
+----------
+Nome: risoto de cogumelos
+Tipo de prato: prato principal
+País de origem: itália
+Ingredientes: 1 cebola picada, 2 dentes de alho picados, 2 colheres de sopa de azeite, 1 xícara de arroz arbóreo, 1 xícara de vinho branco seco, 4 xícaras de caldo de legumes quente, 200g de cogumelos frescos fatiados, 1/2 xícara de queijo parmesão ralado, sal e pimenta a gosto.
+Modo de preparo: 1. Refogue a cebola e o alho no azeite até ficarem macios. 2. Adicione o arroz e refogue por 1 minuto. 3. Despeje o vinho branco e deixe evaporar. 4. Adicione o caldo de legumes, uma concha de cada vez, mexendo sempre até que o arroz esteja cozido. 5. Adicione os cogumelos e cozinhe por mais alguns minutos. 6. Misture o queijo parmesão, tempere com sal e pimenta a gosto. 7. Sirva quente.
+----------
+Nome: tacos de peixe com manga
+Tipo de prato: prato principal
+País de origem: méxico
+Ingredientes: 500g de filé de peixe branco, 1 colher de chá de páprica doce, 1 colher de chá de cominho em pó, 1/2 colher de chá de pimenta caiena, suco de 1 limão, 1 colher de sopa de azeite, 1 manga madura picada, 1 cebola roxa picada, 1/2 xícara de coentro picado, 12 tortillas de milho.
+Modo de preparo: 1. Corte o peixe em cubos e tempere com páprica, cominho, pimenta caiena, suco de limão e azeite. 2. Em uma tigela, misture a manga picada, a cebola roxa, o coentro e tempere com sal e pimenta a gosto. 3. Aqueça uma frigideira ou grelha e cozinhe o peixe até ficar macio. 4. Aqueça as tortillas. 5. Recheie as tortillas com o peixe e a mistura de manga. 6. Sirva imediatamente.
+----------
+Nome: curry de grão de bico com espinafre
+Tipo de prato: prato principal
+País de origem: índia
+Ingredientes: 1 cebola picada, 2 dentes de alho picados, 1 colher de sopa de azeite, 1 colher de sopa de curry em pó, 1 colher de chá de gengibre ralado, 1 lata de tomate picado, 1 lata de grão de bico cozido, 2 xícaras de espinafre picado, sal e pimenta a gosto.
+Modo de preparo: 1. Refogue a cebola e o alho no azeite até ficarem macios. 2. Adicione o curry em pó, o gengibre e refogue por mais 1 minuto. 3. Adicione o tomate picado, o grão de bico e o espinafre. 4. Cozinhe por 10 minutos, mexendo ocasionalmente. 5. Tempere com sal e pimenta a gosto. 6. Sirva com arroz branco.
+----------
+Nome: salada grega com queijo feta
+Tipo de prato: salada
+País de origem: grécia
+Ingredientes: 1 pepino picado, 2 tomates picados, 1 cebola roxa cortada em rodelas finas, 1 xícara de azeitonas pretas, 100g de queijo feta em cubos, azeite extra virgem, suco de 1 limão, orégano seco a gosto.
+Modo de preparo: 1. Em uma tigela, misture o pepino, tomate, cebola, azeitonas e queijo feta. 2. Tempere com azeite, suco de limão, orégano, sal e pimenta a gosto. 3. Sirva fria.
+----------
+Nome: panquecas americanas com mirtilos
+Tipo de prato: café da manhã
+País de origem: estados unidos
+Ingredientes: 1 xícara de farinha de trigo, 2 colheres de sopa de açúcar, 2 colheres de chá de fermento em pó, 1/2 colher de chá de sal, 1 ovo grande, 1 xícara de leite, 2 colheres de sopa de manteiga derretida, 1 xícara de mirtilos frescos.
+Modo de preparo: 1. Em uma tigela grande, misture a farinha, o açúcar, o fermento e o sal. 2. Em outra tigela, bata o ovo, o leite e a manteiga derretida. 3. Adicione os ingredientes líquidos aos ingredientes secos e misture até incorporar. 4. Adicione os mirtilos à massa. 5. Aqueça uma frigideira levemente untada em fogo médio. 6. Despeje 1/4 de xícara da massa na frigideira quente para cada panqueca. 7. Cozinhe por 2-3 minutos de cada lado, ou até dourar. 8. Sirva quente com mel, manteiga ou xarope de bordo.
+----------
+Nome: guacamole com chips de batata doce
+Tipo de prato: aperitivo
+País de origem: méxico
+Ingredientes: 2 abacates maduros, 1 tomate picado, 1/2 cebola roxa picada, 1 dente de alho picado, 1/4 xícara de coentro picado, suco de 1 limão, sal e pimenta a gosto. Para os chips: 1 batata doce média, 2 colheres de sopa de azeite, sal a gosto.
+Modo de preparo: 1. Para os chips: Pré-aqueça o forno a 200°C. Corte a batata doce em fatias finas. Regue com azeite e tempere com sal. Asse por 15-20 minutos, ou até ficar crocante. 2. Para o guacamole: Amasse o abacate com um garfo. Adicione o tomate, a cebola, o alho, o coentro, o suco de limão, sal e pimenta a gosto. Misture bem. 3. Sirva o guacamole com os chips de batata doce.
+----------
+Nome: bolo de chocolate com cobertura de ganache
+Tipo de prato: sobremesa
+País de origem: frança
+Ingredientes: Para o bolo: 1 xícara de farinha de trigo, 1 xícara de açúcar, 1/2 xícara de cacau em pó, 1 colher de chá de fermento em pó, 1/2 colher de chá de bicarbonato de sódio, 1/4 colher de chá de sal, 1 ovo grande, 1 xícara de leite, 1/4 xícara de óleo vegetal, 1 colher de chá de extrato de baunilha. Para a ganache: 1 xícara de creme de leite fresco, 200g de chocolate meio amargo picado.
+Modo de preparo: 1. Pré-aqueça o forno a 180°C. Unte e enfarinhe uma forma redonda de 22cm de diâmetro. 2. Em uma tigela grande, misture a farinha, o açúcar, o cacau em pó, o fermento, o bicarbonato e o sal. 3. Em outra tigela, bata o ovo, o leite, o óleo e o extrato de baunilha. 4. Adicione os ingredientes líquidos aos ingredientes secos e misture até incorporar. 5. Despeje a massa na forma preparada e leve ao forno por 30-35 minutos, ou até que um palito inserido no centro saia limpo. 6. Para a ganache: Aqueça o creme de leite em uma panela pequena em fogo médio até ferver. Retire do fogo e adicione o chocolate picado. Mexa até o chocolate derreter e a ganache ficar lisa. 7. Deixe o bolo esfriar completamente antes de cobrir com a ganache. 8. Sirva em temperatura ambiente.
+----------
+Nome: smoothie de morango e banana
+Tipo de prato: bebida
+País de origem: brasil
+Ingredientes: 1 xícara de morangos congelados, 1 banana congelada, 1/2 xícara de leite, 1/4 xícara de iogurte natural, 1 colher de sopa de mel.
+Modo de preparo: 1. Bata todos os ingredientes no liquidificador até ficar homogêneo e cremoso. 2. Sirva imediatamente. 
+----------

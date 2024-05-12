@@ -1,5 +1,7 @@
 import os
+import random
 
+aleatorias = [ ]
 nomes = [ ]
 favoritos = [ ]
 
