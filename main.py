@@ -172,7 +172,7 @@ def lista_favoritos():
         resposta = input("Opções de Entrada:\n\n1 - adicionar uma receita aos favortios\n2 - remover uma receita aos favortios\n3 - visualizar lista de favoritos\n4 - voltar pro menu\n\nDigite o numero referente a operação desejada: ")
         if resposta == '1':
             os.system('cls')
-            nome_favoritar = input("Digite receita que deseja favoritar: ")
+            nome_favoritar = input("Digite receita que deseja favoritar: ").lower()
             if nome_favoritar not in nomes:
                 print("\nReceita inexistente.")
                 input("\nPressione ENTER para continuar")
@@ -182,7 +182,7 @@ def lista_favoritos():
             input("Pressione ENTER para continuar")
         if resposta == '2':
             os.system('cls')
-            nome_remover = input("Digite receita que deseja remover dos favoritos: ")
+            nome_remover = input("Digite receita que deseja remover dos favoritos: ").lower()
             if nome_remover not in nomes:
                 print("\nReceita inexistente.")
                 input("\nPressione ENTER para continuar")
