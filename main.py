@@ -1,7 +1,7 @@
 import os
 import random
 
-aleatorias = [
+aleatorias = (
     "sopa de legumes colorida",
     "frango assado com limão e ervas",
     "risoto de cogumelos",
@@ -12,7 +12,7 @@ aleatorias = [
     "guacamole com chips de batata doce",
     "bolo de chocolate com cobertura de ganache",
     "smoothie de morango e banana"
-]
+)
 nomes = [ ]
 favoritos = [ ]
 
