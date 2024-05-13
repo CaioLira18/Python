@@ -182,7 +182,7 @@ def lista_favoritos():
     os.system('cls')
     while True:
         os.system('cls')
-        resposta = input("Opções de Entrada:\n\n1 - adicionar uma receita aos favortios\n2 - remover uma receita aos favortios\n3 - visualizar lista de favoritos\n4 - voltar pro menu\n\nDigite o numero referente a operação desejada: ")
+        resposta = input("Opções de Entrada:\n\n1 - Adicionar uma receita aos favortios\n2 - Remover uma receita aos favortios\n3 - Visualizar lista de favoritos\n4 - Voltar pro menu\n\nDigite o numero referente a operação desejada: ")
         if resposta == '1':
             os.system('cls')
             nome_favoritar = input("Digite receita que deseja favoritar: ").lower()
@@ -220,6 +220,22 @@ def lista_favoritos():
         if resposta == '4':
             break
 
+def receitas_aleatorias():
+    os.system('cls')
+    recipe_random = aleatorias[random.randint(0, len(aleatorias) - 1)]
+    with open("aleatorias.txt", "r", encoding="utf-8") as arquivo:
+            print()
+            linhas = arquivo.readlines()
+            i = 0
+            while i < len(linhas):
+                if recipe_random in linhas[i]:
+                    os.system("cls")
+                    print(f"Receita aleatoria:\n\nNome: {recipe_random}")
+                    for j in range(i + 1, min(i + 6, len(linhas))):  # Imprimindo as próximas 4 linhas
+                        print(linhas[j], end='')
+                    break
+                i += 1
+    input("\nPressione ENTER para continuar")
 # Menu Interativo   
 while True: # Loop While para o usuario ter a possibilidade de realizar outra função
     os.system('cls')
