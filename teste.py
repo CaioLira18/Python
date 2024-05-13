@@ -70,6 +70,9 @@ def remover_receita():
     if not removido:
         print(f"A receita '{nome_receita}' não foi encontrada.")
 
+def atualizar_receita():
+    
+
 def visualizar_receita():
     resposta = input("Digite 1 para visualizar todas as receitas e 2 para visualizar uma receita específica: ")
     
@@ -93,6 +96,22 @@ def visualizar_receita():
                 i += 1
             else:
                 print(f"A receita '{nome_receita}' não foi encontrada.")
+
+def filtrar_pais():
+    pais = input("Digite o país que você deseja filtar: ").lower()
+    with open("receitas.txt", "r", encoding="utf-8") as arquivo:
+        linhas = arquivo.readlines()
+        i = 0
+        encontrou_pais = False
+        while i < len(linhas):
+            if pais in linhas[i]:
+                encontrou_pais = True
+                print(f"País encontrado!")
+                for j in range(i - 2, i + 4):  # Imprimindo as próximas 5 linhas a partir da linha do país encontrado
+                    print(linhas[j], end='')
+            i += 1
+        if not encontrou_pais:
+            print(f"O {pais} não foi encontrado.")
 
 
 # Menu Interativo   
