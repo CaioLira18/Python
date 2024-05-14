@@ -30,3 +30,7 @@ Este projeto foi desenvolvido como parte do curso de Fundamentos de Programaçã
 - Clone este repositório para sua máquina local.
 - Abra um terminal na pasta do projeto.
 - Execute o comando python main.py para iniciar o sistema.
+
+- # Link do Arquivo PDF
+- Contém o Manual do Programa
+- www.link.com.br
