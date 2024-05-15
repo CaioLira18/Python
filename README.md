@@ -23,6 +23,7 @@ Este projeto foi desenvolvido como parte do curso de Fundamentos de Programaçã
 - teste.py: Contém o código principal do sistema, incluindo as funcionalidades principais.
 - receitas.txt: Arquivo de banco de dados para armazenamento das receitas.
 - aleatorias.txt: Arquivo de banco de dados para armazenamento de sugestões de receitas.
+- listas.txt: Arquivo de banco de dados para armazenar as listas.
 
 # Como Executar o Projeto
 

@@ -1,21 +1,6 @@
 import os
 import random
 
-aleatorias = (
-    "sopa de legumes colorida",
-    "frango assado com limão e ervas",
-    "risoto de cogumelos",
-    "tacos de peixe com manga",
-    "curry de grão de bico com espinafre",
-    "salada grega com queijo feta",
-    "panquecas americanas com mirtilos",
-    "guacamole com chips de batata doce",
-    "bolo de chocolate com cobertura de ganache",
-    "smoothie de morango e banana"
-)
-nomes = [ ]
-favoritos = [ ]
-
 def adicionar_receita():
     os.system('cls')
     nome = input("Digite o nome da receita: ").lower() # Adiciona o nome da receita
@@ -236,7 +221,33 @@ def receitas_aleatorias():
                     break
                 i += 1
     input("\nPressione ENTER para continuar")
-# Menu Interativo   
+
+def linha_para_lista(linha):
+    lista_str = linha.strip()
+    if lista_str == "[]":
+        return []
+    else:
+        return lista_str.strip('[]').replace("'", "").split(', ')
+
+aleatorias = (
+    "sopa de legumes colorida",
+    "frango assado com limão e ervas",
+    "risoto de cogumelos",
+    "tacos de peixe com manga",
+    "curry de grão de bico com espinafre",
+    "salada grega com queijo feta",
+    "panquecas americanas com mirtilos",
+    "guacamole com chips de batata doce",
+    "bolo de chocolate com cobertura de ganache",
+    "smoothie de morango e banana"
+)
+
+with open("listas.txt", "r") as file:
+    linhas = file.readlines()
+
+nomes = linha_para_lista(linhas[0])
+favoritos = linha_para_lista(linhas[1])
+
 while True: # Loop While para o usuario ter a possibilidade de realizar outra função
     os.system('cls')
     opcao = input("Opções de Entrada:\n\n1 - Funções Básicas (Adicionar, Remover, Visualizar e Atualizar)\n2 - Funções especiais (Filtrar por país, Lista de favoritos, Receitas aleatórias e Filtrar por tipo de prato)\n3 - Finalizar\n\nDigite o numero referente a operação desejada: ")
@@ -267,4 +278,13 @@ while True: # Loop While para o usuario ter a possibilidade de realizar outra fu
         elif opcao == '5':
             continue
     elif opcao == '3':
+        nomesstr = str(nomes)
+        favoritosstr = str(favoritos)
+        with open("listas.txt", "w") as file:
+            file.writelines(linhas[2:])
+        with open("listas.txt", "a") as file:
+            file.write(nomesstr)
+            file.write("\n")
+            file.write(favoritosstr)
+            file.write("\n")
         break
