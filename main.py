@@ -34,7 +34,8 @@ def remover_receita():
 # remover os dados adicionados previamente
     if nome_receita in nomes:
         nomes.remove(nome_receita)
-        favoritos.remove(nome_receita)
+        if nome_receita in favoritos:
+            favoritos.remove(nome_receita)
 
     with open("receitas.txt", "r", encoding="utf-8") as arquivo:
         linhas = arquivo.readlines()
