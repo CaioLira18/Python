@@ -220,7 +220,26 @@ def receitas_aleatorias():
                         print(linhas[j], end='')
                     break
                 i += 1
-    input("\nPressione ENTER para continuar")
+    escolha_aleatorias = input(f"\nVocê deseja adicionar '{recipe_random}' a sua lista de Receitas[S/N]: ").lower()
+
+    with open("aleatorias.txt", "r", encoding="utf-8") as arquivo:
+        if escolha_aleatorias == 's':
+            adicionando_aleatoria = []
+            for linhas in arquivo:
+                if recipe_random in linhas:
+                    i = 0
+                    while i < 6:
+                        adicionando_aleatoria.append(linhas)
+                        linhas = arquivo.readline()
+                        i += 1
+                    with open("receitas.txt", "a", encoding="utf-8") as arquivo_receitas:
+                        for item in adicionando_aleatoria:
+                            arquivo_receitas.write(item)
+                        arquivo_receitas.write("\n")
+                    print("Receita adicionada com sucesso!\n") 
+                    input("Pressione ENTER para continuar")
+        elif escolha_aleatorias == 'n':
+            input('Pressione ENTER para continuar')
 
 def linha_para_lista(linha):
     lista_str = linha.strip()
