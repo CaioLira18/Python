@@ -235,7 +235,7 @@ def receitas_aleatorias():
                         print(linhas[j], end='')
                     break
                 i += 1
-    input("\nPressione ENTER para continuar")
+    input("\nPressione ENTER para continuar")
 # Menu Interativo   
 while True: # Loop While para o usuario ter a possibilidade de realizar outra função
     os.system('cls')
