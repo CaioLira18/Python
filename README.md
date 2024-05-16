@@ -35,4 +35,4 @@ Este projeto foi desenvolvido como parte do curso de Fundamentos de Programaçã
 # Link do Arquivo PDF
 
 - Contém o Manual do Programa
-- www.link.com.br
+- [Manual](https://www.canva.com/design/DAGFNr91pIY/iNY3Y-OCRnzfhF9vpl0Hcw/view?utm_content=DAGFNr91pIY&utm_campaign=designshare&utm_medium=link&utm_source=editor)
