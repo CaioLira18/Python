@@ -3,35 +3,35 @@ import random
 
 def adicionar_receita():
     os.system('cls')
-    nome = input("Digite o nome da receita: ").lower() # Adiciona o nome da receita
+    nome = input("Digite o nome da receita: ").lower() 
     if nome in nomes:
         os.system('cls')
         print("A receita já foi adicionada.\n")
         input("Pressione ENTER para continuar")
         return
     tipo_prato = input("Digite o tipo do prato (Sobremesa, Salada, Aperitivo etc): ").lower()
-    pais_origem = input("Digite o país de origem da receita: ").lower() # Adiciona o país de origem
-    ingredientes = input("Digite os ingredientes da receita (separados por vírgula): ").lower() # Adiciona os Ingredientes
-    modo_preparo = input("Digite o modo de preparo da receita: ").lower() # Adiciona o passo a passo
+    pais_origem = input("Digite o país de origem da receita: ").lower() 
+    ingredientes = input("Digite os ingredientes da receita (separados por vírgula): ").lower() 
+    modo_preparo = input("Digite o modo de preparo da receita: ").lower() 
     separador = "----------"
 
     os.system('cls')
-    # Formatação da receita
+   
     receita = f"Nome: {nome}\nTipo de prato: {tipo_prato}\nPaís de origem: {pais_origem}\nIngredientes: {ingredientes}\nModo de preparo: {modo_preparo}\n{separador}"
-    # lista para armazenar nomes
+   
     nomes.append(nome)
-    # Adicionando a receita ao arquivo
+    
     with open("receitas.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(receita)
         arquivo.write("\n")
-    print("Receita adicionada com sucesso!\n") # Retorna ao usuario uma mensagem de sucesso
+    print("Receita adicionada com sucesso!\n") 
     input("Pressione ENTER para continuar")
 
 def remover_receita():
     os.system('cls')
 
     nome_receita = input("Digite o nome da receita que deseja remover: ").lower()
-# remover os dados adicionados previamente
+
     if nome_receita in nomes:
         nomes.remove(nome_receita)
         if nome_receita in favoritos:
@@ -47,7 +47,6 @@ def remover_receita():
         while i < len(linhas):
             if nome_receita in linhas[i]:
                 removido = True
-                # Pular as próximas linhas que contêm informações da receita
                 i += 6
                 print(f"\nA receita '{nome_receita}' foi removida.\n")
             else:
@@ -78,7 +77,7 @@ def visualizar_receita():
                 if nome_receita in linhas[i]:
                     os.system("cls")
                     print(f"Receita encontrada!\n\nNome: {nome_receita}")
-                    for j in range(i + 1, min(i + 6, len(linhas))):  # Imprimindo as próximas 4 linhas
+                    for j in range(i + 1, min(i + 6, len(linhas))):  
                         print(linhas[j], end='')
                     break
                 i += 1
@@ -97,7 +96,7 @@ def filtrar_pais():
             if pais in linhas[i]:
                 encontrou_pais = True
                 print(f"\nPaís encontrado!\n")
-                for j in range(i - 2, i + 4):  # Imprimindo as próximas 5 linhas a partir da linha do país encontrado
+                for j in range(i - 2, i + 4): 
                     print(linhas[j], end='')
             i += 1
         if not encontrou_pais:
@@ -115,7 +114,7 @@ def filtar_prato():
             if tipos_prato in linhas[i]:
                 encontrou_prato = True
                 print(f"\nTipo de prato encontrado!\n")
-                for j in range(i - 1, i + 5):  # Imprimindo as próximas 5 linhas a partir da linha do país encontrado
+                for j in range(i - 1, i + 5):  
                     print(linhas[j], end='')
             i += 1
         if not encontrou_prato:
@@ -137,14 +136,12 @@ def atualizar_receita():
     separador = "----------"
 
     os.system('cls')
-# Atualizando os dados da receita na lista e nos dicionários
+
     indice_receita = nomes.index(nome_atualizar)
     nomes[indice_receita] = nome_atualizar
 
-    # Construindo a nova versão da receita
     nova_receita = f"Nome: {nome_atualizar}\nTipo de prato: {tipo_prato_novo}\nPaís de origem: {pais_origem_novo}\nIngredientes: {ingredientes_novos}\nModo de preparo: {modo_preparo_novo}\n{separador}"
 
-    # Atualizando a receita no arquivo
     with open("receitas.txt", "r", encoding="utf-8") as arquivo:
         linhas = arquivo.readlines()
     with open("receitas.txt", "w", encoding="utf-8") as arquivo:
@@ -198,7 +195,7 @@ def lista_favoritos():
                 while i < len(linhas):
                     if favorito in linhas[i]:
                         print(f"Nome: {favorito}")
-                        for j in range(i + 1, min(i + 6, len(linhas))):  # Imprimindo as próximas 4 linhas
+                        for j in range(i + 1, min(i + 6, len(linhas))):  
                             print(linhas[j], end='')
                         break
                     i += 1
@@ -217,7 +214,7 @@ def receitas_aleatorias():
                 if recipe_random in linhas[i]:
                     os.system("cls")
                     print(f"Receita aleatoria:\n\nNome: {recipe_random}")
-                    for j in range(i + 1, min(i + 6, len(linhas))):  # Imprimindo as próximas 4 linhas
+                    for j in range(i + 1, min(i + 6, len(linhas))):  
                         print(linhas[j], end='')
                     break
                 i += 1
@@ -249,7 +246,7 @@ with open("listas.txt", "r") as file:
 nomes = linha_para_lista(linhas[0])
 favoritos = linha_para_lista(linhas[1])
 
-while True: # Loop While para o usuario ter a possibilidade de realizar outra função
+while True: 
     os.system('cls')
     opcao = input("Opções de Entrada:\n\n1 - Funções Básicas (Adicionar, Remover, Visualizar e Atualizar)\n2 - Funções especiais (Filtrar por país, Lista de favoritos, Receitas aleatórias e Filtrar por tipo de prato)\n3 - Finalizar\n\nDigite o numero referente a operação desejada: ")
     if opcao == '1':
