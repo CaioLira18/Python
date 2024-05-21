@@ -1,0 +1,7 @@
+Criar nova linha para dizer se é favorito ou não
+Colocar todas as receitas favoritas no banco principal
+Remover a tupla de aleatórias
+Deletar arquivo aleatórios.txt
+Mover as receitas aleatórias para receitas.txt(banco de dados principal)
+Implementar tratamento de erros
+Criar uma interface (Ideia nossa para fazer no futuro)
